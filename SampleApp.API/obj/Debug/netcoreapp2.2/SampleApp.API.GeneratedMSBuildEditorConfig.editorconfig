@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = SampleApp.API
+build_property.ProjectDir = C:\Users\sopha\source\repos\identityserver4-dockersample-dotnetcore-nginx\SampleApp.API\
