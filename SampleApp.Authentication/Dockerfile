@@ -1,11 +1,11 @@
-FROM microsoft/dotnet:2.2.100-sdk-alpine3.8 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 COPY *.csproj .
 RUN dotnet restore
 COPY . .
 RUN dotnet publish -c Debug -o out
 
-FROM microsoft/dotnet:2.2.0-aspnetcore-runtime-alpine3.8
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 EXPOSE 80
 WORKDIR /app
 COPY --from=build /app/out .
